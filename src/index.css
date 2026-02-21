@@ -1,0 +1,39 @@
+@import url('https://fonts.googleapis.com/css2?family=Amiri:ital,wght@0,400;0,700;1,400;1,700&family=Inter:wght@400;500;600&display=swap');
+@import "tailwindcss";
+
+@theme {
+  --font-serif: "Amiri", serif;
+  --font-sans: "Inter", ui-sans-serif, system-ui, sans-serif;
+}
+
+@layer base {
+  body {
+    @apply bg-[#fdfaf6] text-[#2c2c2c] font-serif transition-colors duration-300;
+    direction: rtl;
+  }
+
+  body.dark {
+    @apply bg-[#121212] text-[#e0e0e0];
+  }
+}
+
+.markdown-body h1, .markdown-body h2, .markdown-body h3 {
+  @apply font-bold my-4;
+}
+
+.markdown-body p {
+  @apply my-2 leading-relaxed;
+}
+
+.markdown-body ul {
+  @apply list-disc list-inside my-2;
+}
+
+.markdown-body blockquote {
+  @apply border-r-4 border-amber-200 pr-4 my-4 italic bg-amber-50/50 py-2;
+}
+
+.dark .markdown-body blockquote {
+  @apply border-amber-500/50 bg-amber-900/20 text-amber-200;
+}
+
